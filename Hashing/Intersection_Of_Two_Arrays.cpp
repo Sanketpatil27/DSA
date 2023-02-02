@@ -26,7 +26,7 @@ int distCount(vector<int> arr1, vector<int> arr2) {
 
         if(flag == true) { continue; }
 
-        //  completed checking 
+        //  completed checking  for repetitiion
 
         // now we check second array have this elem or not
         for(int j = 0; j < arr2.size(); j++) {
@@ -54,7 +54,7 @@ int optimized(vector<int> arr1, vector<int> arr2) {
     {
         if(s.find(arr2[j]) != s.end()) {    
             res++;                          // if find that elem then:
-            s.erase(arr2[j]);               // erase from set coz this can come agian in arr2 then it will find again so don't want it
+            s.erase(arr2[j]);               // erase from set coz this can come again in arr2 then it will find again so don't want it
         }                                   // erase and find take constant time O(1)
     }
     
