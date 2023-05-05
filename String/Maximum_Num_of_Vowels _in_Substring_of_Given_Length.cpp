@@ -1,23 +1,21 @@
 class Solution {
 public:
+
+    bool ifVowel(char c) {
+        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+    }
+
     int maxVowels(string s, int k) {
-        set<int> vowels = {'a', 'e', 'i', 'o', 'u'};
         int cnt = 0;
         int mxcnt = 0;
-        
-        for(int i = 0; i < k; i++) 
-            if(vowels.find(s[i]) != vowels.end()) 
-                cnt++;
-        
-        mxcnt = max(mxcnt, cnt);
-
-        for(int i = k; i < s.size(); i++) {
+                
+        for(int i = 0; i < s.size(); i++) {
             
             // if previous window affect to count means contain vowel
-            if(vowels.find(s[i-k]) != vowels.end()) 
+            if(i >= k && ifVowel(s[i-k]))
                 cnt--;
 
-            if(vowels.find(s[i]) != vowels.end()) 
+            if(ifVowel(s[i])) 
                 cnt++;
             
             mxcnt = max(cnt, mxcnt);
