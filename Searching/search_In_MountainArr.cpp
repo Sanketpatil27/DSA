@@ -1,0 +1,1 @@
+// array properties is similar to peak in mountain array question
