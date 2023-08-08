@@ -6,7 +6,7 @@ using namespace std;
 vector<int> maxSlidingWindow(vector<int>& nums, int k) {
     // all operations of deque takes O(1) time
     // every elem is pushed and popped 1 times each so over time complexity is O(n)
-    // T/C: O(n)    S/C: O(k) kkkkk karan kakdkda
+    // T/C: O(n)    S/C: O(k) 
     vector<int> maxi;
     deque<int> dq;
     int n = nums.size();
